@@ -1,21 +1,19 @@
 <nav class="navbar navbar-dark fixed-top bg-dark">
+    <!--We are getting the github image from https://github.com/favicon.ico-->
       <img src="https://github.com/favicon.ico" width="48">
      <h2 class="text">Github Pull</h2>
 </nav>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <div class="jumbotrun push">
     <div class="col-md-12">
         <form (submit) ="search()" class="jump">
             <div class="form-group">
                 <label for="Repo">Enter repo (username/repo-name)</label>
-            <input type="text" class="form-control"placeholder="username/repo-name" 
-style="width:300px;display:inline-block;margin-right: 25px; margin-left: 25px;" 
-name="username" [(ngModel)] = "username"/>
+                <input type="text" class="form-control"placeholder="username/repo-name" 
+                style="width:300px;display:inline-block;margin-right: 25px; margin-left: 25px;" 
+                name="username" [(ngModel)] = "username"/>
 
-<input type="submit" value="Fetch" class="btn btn-info" />
+                <input type="submit" value="Fetch" class="btn btn-info" />
             </div>
            
         </form>
@@ -23,13 +21,13 @@ name="username" [(ngModel)] = "username"/>
 </div>
     
 <div *ngFor="let pull of pulls">
-<div class="card card-inverse card-primary mb-3 text-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-        <h2>TITLE: {{pull.title}}</h2>
-      <p>AUTHOR: {{pull.author_association}}</p>
-      <footer>TIME UPDATED: {{pull.updated_at}}</footer>
-    </blockquote>
-  </div>
-</div>
+    <div class="card card-inverse card-primary mb-3 text-center">
+        <div class="card-block">
+            <blockquote class="card-blockquote">
+                <h2>TITLE: {{pull.title}}</h2>
+                <p>AUTHOR: {{pull.author_association}}</p>
+                <footer>TIME UPDATED: {{pull.updated_at}}</footer>
+            </blockquote>
+        </div>
+    </div>
 </div>

@@ -4,8 +4,8 @@ import {GithubService} from '../github.service';
 @Component({
   selector: 'app-github',
   templateUrl: './github.component.html',
-  styleUrls: ['./github.component.css'],
-  providers:[GithubService]
+  styleUrls: ['./github.component.css']
+  
 })
 export class GithubComponent implements OnInit {
 username: any;
